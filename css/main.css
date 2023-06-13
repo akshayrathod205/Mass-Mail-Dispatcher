@@ -554,6 +554,10 @@ video {
   position: relative;
 }
 
+.float-left {
+  float: left;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -561,6 +565,10 @@ video {
 
 .ml-36 {
   margin-left: 9rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .mt-24 {

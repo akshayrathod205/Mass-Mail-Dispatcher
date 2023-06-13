@@ -29,7 +29,7 @@
                     <input type="file" accept=".csv" required="" id="upload-file-input" name="upload-file-input">
                 </label>
             </form> -->
-            <form class="form ml-36">
+            <!-- <form class="form ml-36">
                 <span class="form-title">Upload your file</span>
                 <p class="form-paragraph">
                     File should be of .csv format
@@ -37,9 +37,11 @@
                 <label for="file-input" class="drop-container">
                     <span class="drop-title">Drop files here</span>
                     or
-                    <input type="file" accept="image/*" required="" id="file-input">
+                    <input type="file" accept=".csv" required id="file-input">
                 </label>
-            </form>
+            </form> -->
+            <label for="csvFile">CSV File:</label>
+            <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
         </div>
 
         <div class="bg-gray-200 rounded-r-2xl relative self-stretch p-5 mt-32 md:w-1/2">
@@ -81,6 +83,17 @@
                     </button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <div class="flex">
+        <div>
+            <p>Valid Emails: <span id="validEmailCount"></span></p>
+            <div id="validEmails" class="float-left"></div>
+        </div>
+        <div class="ml-4">
+            <p>Invalid Emails: <span id="invalidEmailCount"></span></p>
+            <div id="invalidEmails" class="float-left"></div>
         </div>
     </div>
 
