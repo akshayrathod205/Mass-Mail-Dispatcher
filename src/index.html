@@ -11,7 +11,7 @@
 
 <body>
     <div
-        class="container flex flex-col-reverse items-center rounded-2xl pl-6 mx-auto mt-24 space-y-0 bg-blue-600  md:space-y-0 md:flex-row">
+        class="container flex flex-col-reverse rounded-2xl pl-6 mx-auto mt-20 space-y-0 bg-blue-600  md:space-y-0 md:flex-row">
         <div class="flex flex-col space-y-12 py-10 md:w-1/2">
             <h1 class="max-w-lg text-4xl font-bold text-center text-white md:text-5xl md:text-left">
                 Mass Mail Dispatcher
@@ -29,7 +29,7 @@
                     <input type="file" accept=".csv" required="" id="upload-file-input" name="upload-file-input">
                 </label>
             </form> -->
-            <!-- <form class="form ml-36">
+            <form class="form ml-36">
                 <span class="form-title">Upload your file</span>
                 <p class="form-paragraph">
                     File should be of .csv format
@@ -39,9 +39,9 @@
                     or
                     <input type="file" accept=".csv" required id="file-input">
                 </label>
-            </form> -->
-            <label for="csvFile">CSV File:</label>
-            <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+            </form>
+            <!-- <label for="csvFile">CSV File:</label>
+            <input type="file" id="csvFile" name="csvFile" accept="csv" required> -->
         </div>
 
         <div class="bg-gray-200 rounded-r-2xl relative self-stretch p-5 mt-32 md:w-1/2">
@@ -85,20 +85,19 @@
             </form>
         </div>
     </div>
-
-    <div class="flex">
+    <div class="flex mt-10 justify-around">
         <div>
-            <p>Valid Emails: <span id="validEmailCount"></span></p>
-            <div id="validEmails" class="float-left"></div>
+            <p class="font-bold border-b-2 border-black text-xl">Valid Emails: <span id="validEmailCount"></span></p>
+            <div id="validEmails" class="float-left mt-5 overflow-auto h-80"></div>
         </div>
         <div class="ml-4">
-            <p>Invalid Emails: <span id="invalidEmailCount"></span></p>
-            <div id="invalidEmails" class="float-left"></div>
+            <p class="font-bold border-b-2 border-black text-xl">Invalid Emails: <span id="invalidEmailCount"></span>
+            </p>
+            <div id="invalidEmails" class="float-left mt-5 overflow-auto h-80"></div>
         </div>
     </div>
 
-
-    <script src="../js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
