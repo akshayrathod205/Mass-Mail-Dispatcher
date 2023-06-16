@@ -1,4 +1,8 @@
-document.getElementById("file-input").addEventListener("change", () => {
+const fileInput = document.getElementById("file-input");
+const sendBtn = document.getElementById("send-btn");
+
+// Read and display the contents of a CSV file
+fileInput.addEventListener("change", () => {
     console.log("File selected");
     var validEmails = [];
     var invalidEmails = [];
@@ -12,8 +16,8 @@ document.getElementById("file-input").addEventListener("change", () => {
         var lines = csv.split('\n');
         for (var i = 0; i < lines.length; i++) {
             var email = lines[i].trim();
-            var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/
-                ;
+            // Email validation regex
+            var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/;
             if (emailRegex.test(email)) {
                 validEmails.push(email);
             } else {
@@ -29,3 +33,7 @@ document.getElementById("file-input").addEventListener("change", () => {
     };
 });
 
+// write a fuction to send email to all valid emails
+sendBtn.addEventListener("click", () => {
+    
+});
