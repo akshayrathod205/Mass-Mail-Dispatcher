@@ -1,39 +1,26 @@
-const fileInput = document.getElementById("file-input");
+var nodeMailer = require("nodemailer");
 const sendBtn = document.getElementById("send-btn");
-
-// Read and display the contents of a CSV file
-fileInput.addEventListener("change", () => {
-    console.log("File selected");
-    var validEmails = [];
-    var invalidEmails = [];
-
-    // Read contents of CSV file
-    var file = document.getElementById("file-input").files[0];
-    var reader = new FileReader();
-    reader.readAsText(file);
-    reader.onload = function (event) {
-        var csv = event.target.result;
-        var lines = csv.split('\n');
-        for (var i = 0; i < lines.length; i++) {
-            var email = lines[i].trim();
-            // Email validation regex
-            var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/;
-            if (emailRegex.test(email)) {
-                validEmails.push(email);
-            } else {
-                invalidEmails.push(email);
-            }
-        }
-
-        // Display valid and invalid emails
-        document.getElementById("validEmails").innerHTML = validEmails.join("<br><br>");
-        document.getElementById("invalidEmails").innerHTML = invalidEmails.join("<br><br>");
-        document.getElementById("validEmailCount").innerText = "(" + validEmails.length + ")";
-        document.getElementById("invalidEmailCount").innerText = "(" + invalidEmails.length + ")";
-    };
-});
+// const subectInput = document.getElementById("subject");
+// const messageInput = document.getElementById("message");
 
 // write a fuction to send email to all valid emails
-sendBtn.addEventListener("click", () => {
-    
-});
+sendBtn.addEventListener("click", async () => {
+    const transporter = nodeMailer.createTransport({
+        host: "gmail.com",
+        port: 465,
+        secure: true,
+        auth: {
+            user: "",
+            pass: ""
+        }
+    });
+
+    const info = await transporter.sendMail({
+        from : "",
+        to: "",
+        subject: 'Mass Mailer',
+        text: 'Testing the mass mailer'
+    });
+
+    console.log("Message sent: " + info.messageId);
+}).catch(err => console.log(err));
