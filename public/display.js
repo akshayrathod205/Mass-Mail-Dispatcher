@@ -28,5 +28,9 @@ fileInput.addEventListener("change", () => {
         document.getElementById("invalidEmails").innerHTML = invalidEmails.join("<br><br>");
         document.getElementById("validEmailCount").innerText = "(" + validEmails.length + ")";
         document.getElementById("invalidEmailCount").innerText = "(" + invalidEmails.length + ")";
+
+        axios.post('http://localhost:5000/api/v1/mail', {
+            mail: validEmails,
+        })
     };
 });
