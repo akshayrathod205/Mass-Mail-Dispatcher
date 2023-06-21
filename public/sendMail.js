@@ -63,19 +63,3 @@ fileInput.addEventListener("change", async (e) => {
         document.getElementById("invalidEmailCount").innerText = "(" + invalidEmails.length + ")";
     };
 });
-
-// // Send valid emails to the server
-// // submit.addEventListener("click", async () => {
-// //     axios
-// //         .post('http://localhost:3002/api/v1/mail', {
-// //             mail: validEmails,
-// //         })
-// //         .then((res) => {
-// //             console.log(res.data);
-// //             alert("Emails sent successfully!");
-// //         })
-// //         .catch((err) => {
-// //             console.log(err);
-// //             alert("Error sending emails!");
-// //         });
-// // });
