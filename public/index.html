@@ -29,7 +29,7 @@
                     <input type="file" accept=".csv" required="" id="upload-file-input" name="upload-file-input">
                 </label>
             </form> -->
-            <form class="form ml-36" id="form">
+            <form class="form ml-36" id="csv-form">
                 <span class="form-title">Upload your file</span>
                 <p class="form-paragraph">
                     File should be of .csv format
@@ -46,7 +46,7 @@
 
         <div class="bg-gray-200 rounded-r-2xl relative self-stretch p-5 mt-32 md:w-1/2">
             <form id="form">
-                <div class="input-container">
+                <!-- <div class="input-container">
                     <input placeholder="Enter your email" class="input-field" type="email" id="email" required>
                     <label for="email" class="input-label">From</label>
                     <span class="input-highlight"></span>
@@ -61,21 +61,6 @@
                         rows="10" required></textarea>
                     <label for="message" class="input-label">Message</label>
                     <span class="input-highlight"></span>
-                </div>
-                <!-- <div class="container flex flex-col space-y-2 pb-3">
-                    <label for="emails">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required=""
-                        class="flex-1 py-1 px-4 rounded-2xl focus:outline-none" />
-                </div>
-                <div class="container flex flex-col space-y-2 pb-3">
-                    <label for="subject-lbl">Subject:</label>
-                    <input type="text" id="subject" name="subject" placeholder="Enter subject" required=""
-                        class="flex-1 py-1 px-4 rounded-2xl focus:outline-none" />
-                </div> -->
-                <!-- <div class="container flex flex-col space-y-2 pb-3">
-                    <label for="emails">Message:</label>
-                    <textarea id="message" name="message" cols="30" rows="10" required=""
-                        class="flex-1 py-1 px-4 rounded-2xl focus:outline-none"></textarea>
                 </div> -->
                 <div class="text-center">
                     <button class="p-3 px-16 pt-2 bg-blue-600 text-white rounded-full hover:bg-blue-500" id="send-btn">
@@ -97,8 +82,8 @@
         </div>
     </div>
 
-    <script src="display.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="sendMail.js"></script>
 </body>
 
 </html>

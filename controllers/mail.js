@@ -9,17 +9,16 @@ const sendMail = async (req, res) => {
             port: 587,
             secure: false,
             auth: {
-                user: '',
-                pass: ''
+                user: 'kr.akshay234@gmail.com',
+                pass: 'ncbozhbshvwzishj'
             },
         });
 
         await transporter.sendMail({
-            from: '',
-            to: '',
+            from: 'kr.akshay234@gmail.com',
+            to: mail,
             subject: 'Test',
-            text: 'Test',
-            html: '<b>Test</b>'
+            text: 'Test'
         });
 
         res.status(200).json({ message: 'Mail sent successfully' });
