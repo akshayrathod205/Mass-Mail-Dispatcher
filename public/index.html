@@ -20,15 +20,6 @@
                 This is a mass mail dispatcher that can be used to send emails to a large number of people at once.
                 It is a simple and easy to use tool that can be used by anyone. It is also very secure and reliable.
             </p>
-            <!-- <form class="upload-form">
-                <span class="font-bold text-white">Upload your file</span>
-                <p class="form-paragraph text-white">
-                    File should be of format *.csv
-                </p>
-                <label for="upload-file-input" class="upload-drop-container">
-                    <input type="file" accept=".csv" required="" id="upload-file-input" name="upload-file-input">
-                </label>
-            </form> -->
             <form class="form ml-36" id="csv-form">
                 <span class="form-title">Upload your file</span>
                 <p class="form-paragraph">
@@ -40,15 +31,13 @@
                     <input type="file" accept=".csv" required id="file-input">
                 </label>
             </form>
-            <!-- <label for="csvFile">CSV File:</label>
-            <input type="file" id="csvFile" name="csvFile" accept="csv" required> -->
         </div>
 
         <div class="bg-gray-200 rounded-r-2xl relative self-stretch p-5 mt-32 md:w-1/2">
             <form id="form">
-                <!-- <div class="input-container">
-                    <input placeholder="Enter your email" class="input-field" type="email" id="email" required>
-                    <label for="email" class="input-label">From</label>
+                <div class="input-container">
+                    <input placeholder="Enter your name" class="input-field" type="name" id="name" required>
+                    <label for="name" class="input-label">Name</label>
                     <span class="input-highlight"></span>
                 </div>
                 <div class="input-container">
@@ -61,7 +50,7 @@
                         rows="10" required></textarea>
                     <label for="message" class="input-label">Message</label>
                     <span class="input-highlight"></span>
-                </div> -->
+                </div>
                 <div class="text-center">
                     <button class="p-3 px-16 pt-2 bg-blue-600 text-white rounded-full hover:bg-blue-500" id="send-btn">
                         Send
